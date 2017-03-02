@@ -3,6 +3,6 @@
 import {
   AppRegistry,
 } from 'react-native'
-import Reader from './src/components/reader'
+import App from './src/components/app'
 
-AppRegistry.registerComponent('nanp', () => Reader)
+AppRegistry.registerComponent('nanp', () => App)
