@@ -16,25 +16,29 @@ const styles = StyleSheet.create({
   },
 })
 
-export default class Button extends React.Component {
-  render() {
-    const {
-      onPress,
-      title,
-      buttonStyle,
-      titleStyle,
-    } = this.props
+type Props = {
+  onPress: Function,
+  title: string,
+  buttonStyle?: number,
+  titleStyle?: number,
+}
 
+export default function Button(props: Props) {
+  const {
+    onPress,
+    title,
+    buttonStyle,
+    titleStyle,
+  } = props
 
-return (
-      <TouchableOpacity
-        onPress={onPress}
-        style={buttonStyle}
-      >
-        <View style={styles.textContainer}>
-          <Text style={titleStyle}>{title}</Text>
-        </View>
-      </TouchableOpacity>
-    )
-  }
+  return (
+    <TouchableOpacity
+      onPress={onPress}
+      style={buttonStyle}
+    >
+      <View style={styles.textContainer}>
+        <Text style={titleStyle}>{title}</Text>
+      </View>
+    </TouchableOpacity>
+  )
 }
