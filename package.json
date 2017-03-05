@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "lint": "standard",
-    "lint:fix": "standard --fix",
+    "lint": "eslint src *.js",
+    "lint:fix": "npm run lint -- --fix",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "npm run lint && npm run type-check",
     "type-check": "flow"
@@ -15,12 +15,16 @@
     "react-native-camera": "next"
   },
   "devDependencies": {
+    "babel-eslint": "^7.1.1",
     "babel-jest": "18.0.0",
     "babel-preset-react-native": "1.9.1",
+    "eslint": "^3.17.0",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-react-native": "^2.2.1",
     "flow-bin": "0.36.0",
     "jest": "18.1.0",
-    "react-test-renderer": "~15.4.0-rc.4",
-    "standard": "^8.6.0"
+    "react-test-renderer": "~15.4.0-rc.4"
   },
   "jest": {
     "preset": "react-native"
