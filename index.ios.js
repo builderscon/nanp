@@ -1,7 +1,7 @@
 // @flow
 
 import {
-  AppRegistry
+  AppRegistry,
 } from 'react-native'
 import Reader from './src/components/reader'
 

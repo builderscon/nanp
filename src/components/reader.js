@@ -3,7 +3,7 @@ import {
   Dimensions,
   StyleSheet,
   Text,
-  Alert
+  Alert,
 } from 'react-native'
 import Camera from 'react-native-camera'
 
@@ -13,35 +13,27 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center',
     height: Dimensions.get('window').height,
-    width: Dimensions.get('window').width
+    width: Dimensions.get('window').width,
   },
-  capture: {
-    flex: 0,
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    color: '#000',
-    padding: 10,
-    margin: 40
-  }
 })
 
 export default class Reader extends React.Component {
-  constructor () {
+  constructor() {
     super()
 
     this.state = {
-      readData: ''
+      readData: '',
     }
   }
 
-  onQrCodeRead (event) {
+  onQrCodeRead(event) {
     this.setState({
-      readData: event.data.toString()
+      readData: event.data.toString(),
     })
     Alert.alert('read')
   }
 
-  render () {
+  render() {
     return (
       <Camera
         style={styles.preview}
