@@ -97,6 +97,11 @@ rules:
   no-catch-shadow: error
   no-compare-neg-zero: error
   no-confusing-arrow: error
+  no-console:
+    - warn
+    - allow:
+      - warn
+      - error
   no-continue: error
   no-div-regex: error
   no-duplicate-imports: error
@@ -112,7 +117,7 @@ rules:
   no-implicit-coercion: error
   no-implicit-globals: error
   no-implied-eval: error
-  no-inline-comments: error
+  no-inline-comments: off
   no-invalid-this: error
   no-iterator: error
   no-label-var: error
@@ -169,6 +174,9 @@ rules:
   no-unmodified-loop-condition: error
   no-unneeded-ternary: error
   no-unused-expressions: error
+  no-unused-vars:
+    - error
+    - varsIgnorePattern: ^React$
   no-use-before-define: error
   no-useless-call: error
   no-useless-computed-key: error
@@ -207,7 +215,7 @@ rules:
     - single
   radix: error
   require-await: error
-  require-jsdoc: error
+  require-jsdoc: off
   rest-spread-spacing: error
   semi: 'off'
   semi-spacing: error

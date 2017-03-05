@@ -2,9 +2,16 @@
 
 import React from 'react'
 import {
-  View
+  StyleSheet,
+  View,
 } from 'react-native'
 
-export default function StatusBar () {
-  return <View style={{height: 20}} />
+const styles = StyleSheet.create({
+  container: {
+    height: 20,
+  },
+})
+
+export default function StatusBar() {
+  return <View style={styles.container} />
 }

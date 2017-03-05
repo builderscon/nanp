@@ -2,9 +2,9 @@
 
 import React from 'react'
 import {
-  View
+  View,
 } from 'react-native'
 
-export default function StatusBar () {
+export default function StatusBar() {
   return <View />
 }

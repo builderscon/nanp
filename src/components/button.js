@@ -1,30 +1,32 @@
-// flow
+// @flow
 
 import React from 'react'
 import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View
+  View,
 } from 'react-native'
 
 const styles = StyleSheet.create({
   textContainer: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
-  }
+    justifyContent: 'center',
+  },
 })
 
 export default class Button extends React.Component {
-  render () {
+  render() {
     const {
       onPress,
       title,
       buttonStyle,
-      titleStyle
+      titleStyle,
     } = this.props
-    return (
+
+
+return (
       <TouchableOpacity
         onPress={onPress}
         style={buttonStyle}

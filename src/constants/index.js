@@ -1,7 +1,7 @@
-// flow
+// @flow
 
 import COLOR from './color'
 
 export {
-  COLOR
+  COLOR,
 }
