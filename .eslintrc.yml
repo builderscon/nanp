@@ -48,7 +48,10 @@ rules:
   dot-location: error
   dot-notation: error
   eol-last: error
-  eqeqeq: error
+  eqeqeq:
+    - error
+    - always
+    - null: ignore
   func-call-spacing: error
   func-name-matching: error
   func-names: error
@@ -107,7 +110,7 @@ rules:
   no-duplicate-imports: error
   no-else-return: error
   no-empty-function: error
-  no-eq-null: error
+  no-eq-null: off
   no-eval: error
   no-extend-native: error
   no-extra-bind: error
