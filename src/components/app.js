@@ -18,7 +18,11 @@ const styles = StyleSheet.create({
   logo: {
     flex: 5,
   },
-  button: {
+  listButton: {
+    backgroundColor: COLOR.BRIGHT_RED,
+    flex: 1,
+  },
+  scanButton: {
     backgroundColor: COLOR.SOFT_BLUE,
     flex: 1,
   },
@@ -37,10 +41,18 @@ export default function App() {
       <View style={styles.logo} />
       <Button
         onPress={() => {
+          console.log('List is tapped')
+        }}
+        title="List"
+        buttonStyle={styles.listButton}
+        titleStyle={styles.title}
+      />
+      <Button
+        onPress={() => {
           console.log('Scan is tapped')
         }}
         title="Scan"
-        buttonStyle={styles.button}
+        buttonStyle={styles.scanButton}
         titleStyle={styles.title}
       />
     </View>
