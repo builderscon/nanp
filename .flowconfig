@@ -40,5 +40,10 @@ suppress_comment=\\(.\\|\n\\)*\\$FlowFixedInNextDeploy
 
 unsafe.enable_getters_and_setters=true
 
+module.file_ext=.android.js
+module.file_ext=.ios.js
+module.file_ext=.js
+module.file_ext=.jsx
+
 [version]
 ^0.36.0

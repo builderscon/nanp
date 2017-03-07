@@ -1,14 +1,14 @@
 /* eslint-env jest */
 
 import React from 'react'
-import Index from '../index.android.js'
+import Logo from '../../src/components/logo'
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer'
 
-xit('renders correctly', () => {
+it('renders correctly', () => {
   const tree = renderer.create(
-    <Index />
+    <Logo />
   ).toJSON()
   expect(tree).toMatchSnapshot()
 })

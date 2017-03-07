@@ -1,14 +1,14 @@
 /* eslint-env jest */
 
 import React from 'react'
-import Index from '../index.android.js'
+import StatusBar from '../../src/components/status-bar'
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer'
 
-xit('renders correctly', () => {
+it('renders correctly', () => {
   const tree = renderer.create(
-    <Index />
+    <StatusBar />
   ).toJSON()
   expect(tree).toMatchSnapshot()
 })
