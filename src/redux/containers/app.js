@@ -11,8 +11,8 @@ import store from '../store'
 
 import * as navigationActionCreators from '../modules/navigation'
 
-const mapStateToProps = ({ navigation }) => ({
-  navigation,
+const mapStateToProps = ({ navigationState }) => ({
+  navigationState,
 })
 
 const mapDispatchToProps = dispatch => ({

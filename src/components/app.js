@@ -3,68 +3,56 @@
 import React from 'react'
 import {
   StyleSheet,
-  View,
+  NavigationExperimental,
 } from 'react-native'
 
-import { COLOR } from '../constants'
-// Import Reader from './reader'
-import Button from './button'
-import StatusBar from './status-bar'
-import Logo from './logo'
+import Home from './screens/home'
+import Applicants from './screens/applicants'
+import Consent from './screens/consent'
 
 const styles = StyleSheet.create({
-  container: {
+  navigator: {
     flex: 1,
-  },
-  logo: {
-    flex: 5,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  listButton: {
-    backgroundColor: COLOR.BRIGHT_RED,
-    flex: 1,
-  },
-  scanButton: {
-    backgroundColor: COLOR.SOFT_BLUE,
-    flex: 1,
-  },
-  title: {
-    color: COLOR.WHITE,
-    fontSize: 32,
-    fontWeight: 'bold',
-    fontFamily: 'avenir',
   },
 })
 
 type Props = {
-  actions: Object,
+  navigationState: Object,
+  actions: {
+    popRoute: Function,
+  },
 }
-export default function App(props: Props) {
-  return (
-    <View style={styles.container}>
-      <StatusBar />
-      <View style={styles.logo}>
-        <Logo />
-      </View>
-      <Button
-        onPress={() => {
-          console.log('List is tapped')
-          props.actions.pushRoute('list')
-        }}
-        title="List"
-        buttonStyle={styles.listButton}
-        titleStyle={styles.title}
+
+export default class App extends React.Component {
+  props: Props
+
+  renderScene({ scene }: Object) {
+    switch (scene.route.component) {
+      case 'home':
+        return <Home {...this.props} />
+      case 'list':
+        return <Applicants {...this.props} />
+      case 'consent':
+        return <Consent {...this.props} />
+      default:
+        throw new Error('unknown scene')
+    }
+  }
+
+  render() {
+    const {
+      actions,
+      navigationState,
+    } = this.props
+
+
+return (
+      <NavigationExperimental.CardStack
+        onNavigateBack={actions.popRoute}
+        navigationState={navigationState}
+        renderScene={navigation => this.renderScene(navigation)}
+        style={styles.navigator}
       />
-      <Button
-        onPress={() => {
-          console.log('Scan is tapped')
-          props.actions.pushRoute('consent')
-        }}
-        title="Scan"
-        buttonStyle={styles.scanButton}
-        titleStyle={styles.title}
-      />
-    </View>
-  )
+    )
+  }
 }
