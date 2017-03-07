@@ -10,6 +10,7 @@ import {COLOR} from '../constants'
 // Import Reader from './reader'
 import Button from './button'
 import StatusBar from './status-bar'
+import Logo from './logo'
 
 const styles = StyleSheet.create({
   container: {
@@ -17,6 +18,8 @@ const styles = StyleSheet.create({
   },
   logo: {
     flex: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   listButton: {
     backgroundColor: COLOR.BRIGHT_RED,
@@ -38,7 +41,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar />
-      <View style={styles.logo} />
+      <View style={styles.logo}>
+        <Logo />
+      </View>
       <Button
         onPress={() => {
           console.log('List is tapped')
