@@ -3,6 +3,6 @@
 import {
   AppRegistry,
 } from 'react-native'
-import App from './src/components/app'
+import App from './src/redux/containers/app'
 
 AppRegistry.registerComponent('nanp', () => App)

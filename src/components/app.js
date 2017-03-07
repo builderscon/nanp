@@ -6,7 +6,7 @@ import {
   View,
 } from 'react-native'
 
-import {COLOR} from '../constants'
+import { COLOR } from '../constants'
 // Import Reader from './reader'
 import Button from './button'
 import StatusBar from './status-bar'
@@ -37,7 +37,10 @@ const styles = StyleSheet.create({
   },
 })
 
-export default function App() {
+type Props = {
+  actions: Object,
+}
+export default function App(props: Props) {
   return (
     <View style={styles.container}>
       <StatusBar />
@@ -47,6 +50,7 @@ export default function App() {
       <Button
         onPress={() => {
           console.log('List is tapped')
+          props.actions.pushRoute('list')
         }}
         title="List"
         buttonStyle={styles.listButton}
@@ -55,6 +59,7 @@ export default function App() {
       <Button
         onPress={() => {
           console.log('Scan is tapped')
+          props.actions.pushRoute('consent')
         }}
         title="Scan"
         buttonStyle={styles.scanButton}
