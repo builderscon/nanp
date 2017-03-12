@@ -15,6 +15,8 @@
     "react": "~15.4.0-rc.4",
     "react-native": "^0.42.0",
     "react-native-camera": "next",
+    "react-native-navbar": "^1.6.3",
+    "react-native-tableview-simple": "^0.16.4",
     "react-redux": "^5.0.3",
     "redux": "^3.6.0"
   },

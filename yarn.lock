@@ -2939,13 +2939,13 @@ mime-db@~1.23.0:
   version "1.23.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.23.0.tgz#a31b4070adaea27d732ea333740a64d0ec9a6659"
 
-mime-types@2.1.11, mime-types@~2.1.7:
+mime-types@2.1.11, mime-types@~2.1.7, mime-types@~2.1.9:
   version "2.1.11"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.11.tgz#c259c471bda808a85d6cd193b430a5fae4473b3c"
   dependencies:
     mime-db "~1.23.0"
 
-mime-types@^2.1.12, mime-types@~2.1.11, mime-types@~2.1.13, mime-types@~2.1.6, mime-types@~2.1.9:
+mime-types@^2.1.12, mime-types@~2.1.11, mime-types@~2.1.13, mime-types@~2.1.6:
   version "2.1.14"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.14.tgz#f7ef7d97583fcaf3b7d282b6f8b5679dab1e94ee"
   dependencies:
@@ -3374,6 +3374,14 @@ react-deep-force-update@^1.0.0:
 react-native-camera@next:
   version "1.0.0-alpha1"
   resolved "https://registry.yarnpkg.com/react-native-camera/-/react-native-camera-1.0.0-alpha1.tgz#a72d5dcfdca099cca8ab3f27f62906ba462e748e"
+
+react-native-navbar@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/react-native-navbar/-/react-native-navbar-1.6.3.tgz#36ad8b2d2c64fe3f3530378e712ce1ccc60bd18a"
+
+react-native-tableview-simple@^0.16.4:
+  version "0.16.4"
+  resolved "https://registry.yarnpkg.com/react-native-tableview-simple/-/react-native-tableview-simple-0.16.4.tgz#3a34cee505392a6d75ef4fe19ab74c229d02e605"
 
 react-native@^0.42.0:
   version "0.42.0"
