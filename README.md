@@ -11,12 +11,15 @@ Getting Started
     - `npm install -g yarn@latest`
 - react-native-cli
     - `npm install -g react-native-cli`
+- flow-typed
+    - `npm install -g flow-typed`
 
 ### Run the app
 
 1. Clone this repo to your local machine
 2. Run `yarn`
-3. Run `react-native run-ios` / `react-native run-android`
+3. Run `flow-typed install`
+4. Run `react-native run-ios` / `react-native run-android`
 
 Contributing
 ------------
