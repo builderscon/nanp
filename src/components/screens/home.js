@@ -42,7 +42,6 @@ type Props = {
   navigation: Object,
 }
 export default function Home(props: Props) {
-  console.log(props)
   const { navigate } = props.navigation
 
   return (

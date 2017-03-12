@@ -22,9 +22,7 @@ Consent.navigationOptions = {
   title: 'Consent',
 }
 
-type Props = {
-}
-const Navigator = StackNavigator({
+export default StackNavigator({
   Home: {
     screen: Home,
   },
@@ -35,9 +33,3 @@ const Navigator = StackNavigator({
     screen: Consent,
   },
 })
-
-export default function App(props: Props) {
-  return (
-    <Navigator {...props} />
-  )
-}
