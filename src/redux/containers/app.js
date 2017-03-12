@@ -11,11 +11,11 @@ import store from '../store'
 
 import * as navigationActionCreators from '../modules/navigation'
 
-const mapStateToProps = ({ navigationState }) => ({
+const mapStateToProps = ({ navigationState }: any) => ({
   navigationState,
 })
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
   actions: bindActionCreators({
     ...navigationActionCreators,
   }, dispatch),

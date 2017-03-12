@@ -39,8 +39,12 @@ const styles = StyleSheet.create({
 
 type Props = {
   actions: Object,
+  navigation: Object,
 }
 export default function Home(props: Props) {
+  console.log(props)
+  const { navigate } = props.navigation
+
   return (
     <View style={styles.container}>
       <StatusBar />
@@ -49,7 +53,7 @@ export default function Home(props: Props) {
       </View>
       <Button
         onPress={() => {
-          props.actions.pushRoute('list')
+          navigate('Applicants')
         }}
         title="List"
         buttonStyle={styles.listButton}
@@ -57,7 +61,7 @@ export default function Home(props: Props) {
       />
       <Button
         onPress={() => {
-          props.actions.pushRoute('consent')
+          navigate('Consent')
         }}
         title="Scan"
         buttonStyle={styles.scanButton}

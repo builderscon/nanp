@@ -6,7 +6,7 @@
     "lint": "eslint src *.js",
     "lint:fix": "npm run lint -- --fix",
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "npm run lint && npm run type-check && jest",
+    "test": "npm run lint && npm run type-check && npm run test:codes",
     "test:codes": "jest",
     "type-check": "flow"
   },
@@ -15,6 +15,7 @@
     "react": "~15.4.0-rc.4",
     "react-native": "0.40.0",
     "react-native-camera": "next",
+    "react-navigation": "^1.0.0-beta.7",
     "react-redux": "^5.0.3",
     "redux": "^3.6.0"
   },
