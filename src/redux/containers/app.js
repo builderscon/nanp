@@ -2,51 +2,30 @@
 
 import React from 'react'
 import {
-  // bindActionCreators,
-  combineReducers,
-  createStore,
+  bindActionCreators,
 } from 'redux'
 import {
   connect,
   Provider,
 } from 'react-redux'
-import {
-  addNavigationHelpers,
-} from 'react-navigation'
 
 import Navigator from '../../components/app'
+import store from '../store'
 
-// reducers
-const navigationReducer = (state, action) => {
-  const newState = Navigator.router.getStateForAction(action, state)
+import * as counterActionCreators from '../modules/counter'
 
-  return newState || state
-}
-
-const reducers = combineReducers({
-  navigation: navigationReducer,
-})
-
-// store
-const store = createStore(reducers)
-
-// connect
-const mapStateToProps = ({ navigation }: any) => ({
-  navigation,
+const mapStateToProps = ({ counter }: any) => ({
+  counter,
 })
 
 const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
+  actions: bindActionCreators({
+    ...counterActionCreators,
+  }, dispatch),
   dispatch,
 })
 
-const App = props =>
-  <Navigator
-    navigation={addNavigationHelpers({
-      dispatch: props.dispatch,
-      state: props.navigation,
-    })}
-    screenProps={props}
-  />
+const App = props => <Navigator screenProps={props} />
 
 const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(App)
 
