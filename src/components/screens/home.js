@@ -41,7 +41,7 @@ type Props = {
   actions: Object,
   navigation: Object,
 }
-export default function Home(props: Props) {
+const Home = (props: Props) => {
   const { navigate } = props.navigation
 
   return (
@@ -69,3 +69,9 @@ export default function Home(props: Props) {
     </View>
   )
 }
+
+Home.navigationOptions = {
+  title: 'Home',
+}
+
+export default Home

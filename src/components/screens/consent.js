@@ -3,6 +3,10 @@
 import React from 'react'
 import Todo from '../debug/todo'
 
-export default function Applicants() {
-  return <Todo />
+const Consent = () => <Todo />
+
+Consent.navigationOptions = {
+  title: 'Consent',
 }
+
+export default Consent
