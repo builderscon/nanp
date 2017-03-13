@@ -3,6 +3,10 @@
 import React from 'react'
 import Todo from '../debug/todo'
 
-export default function Applicants() {
-  return <Todo />
+const Applicants = () => <Todo />
+
+Applicants.navigationOptions = {
+  title: 'Applicants',
 }
+
+export default Applicants

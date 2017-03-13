@@ -85,7 +85,7 @@ rules:
   max-statements: error
   max-statements-per-line: error
   multiline-ternary: error
-  new-cap: error
+  new-cap: off
   new-parens: error
   newline-after-var:
     - error

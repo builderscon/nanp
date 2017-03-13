@@ -1,25 +1,31 @@
 // @flow
 
 import React from 'react'
-import { bindActionCreators } from 'redux'
+import {
+  bindActionCreators,
+} from 'redux'
 import {
   connect,
   Provider,
 } from 'react-redux'
-import App from '../../components/app'
+
+import Navigator from '../../components/app'
 import store from '../store'
 
-import * as navigationActionCreators from '../modules/navigation'
+import * as counterActionCreators from '../modules/counter'
 
-const mapStateToProps = ({ navigationState }) => ({
-  navigationState,
+const mapStateToProps = ({ counter }: any) => ({
+  counter,
 })
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
   actions: bindActionCreators({
-    ...navigationActionCreators,
+    ...counterActionCreators,
   }, dispatch),
+  dispatch,
 })
+
+const App = props => <Navigator screenProps={props} />
 
 const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(App)
 

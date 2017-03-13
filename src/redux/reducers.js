@@ -4,10 +4,10 @@ import {
   combineReducers,
 } from 'redux'
 
-import navigationReducers from './modules/navigation'
+import counterReducers from './modules/counter'
 
 const reducers = combineReducers({
-  navigationState: navigationReducers,
+  counter: counterReducers,
 })
 
 export default reducers
