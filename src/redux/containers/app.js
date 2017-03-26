@@ -12,15 +12,15 @@ import {
 import Navigator from '../../components/app'
 import store from '../store'
 
-import * as counterActionCreators from '../modules/counter'
+import * as qrCodeReaderActionCreators from '../modules/qr-code-reader'
 
-const mapStateToProps = ({ counter }: any) => ({
-  counter,
+const mapStateToProps = ({ qrCodeReader }: any) => ({
+  qrCodeReader,
 })
 
 const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
   actions: bindActionCreators({
-    ...counterActionCreators,
+    ...qrCodeReaderActionCreators,
   }, dispatch),
   dispatch,
 })
