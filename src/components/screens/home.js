@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
 })
 
 type Props = {
-  actions: Object,
   navigation: Object,
 }
 const Home = (props: Props) => {

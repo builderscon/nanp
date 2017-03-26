@@ -8,6 +8,7 @@ import {
 import Home from './screens/home'
 import Applicants from './screens/applicants'
 import Consent from './screens/consent'
+import Scan from './screens/scan'
 
 export default StackNavigator({
   Home: {
@@ -18,5 +19,8 @@ export default StackNavigator({
   },
   Consent: {
     screen: Consent,
+  },
+  Scan: {
+    screen: Scan,
   },
 })
