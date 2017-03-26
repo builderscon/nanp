@@ -9,6 +9,7 @@ import Home from './screens/home'
 import Applicants from './screens/applicants'
 import Consent from './screens/consent'
 import Scan from './screens/scan'
+import Name from './screens/name'
 
 export default StackNavigator({
   Home: {
@@ -22,5 +23,8 @@ export default StackNavigator({
   },
   Scan: {
     screen: Scan,
+  },
+  Name: {
+    screen: Name,
   },
 })

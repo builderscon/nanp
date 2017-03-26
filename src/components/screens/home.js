@@ -7,7 +7,6 @@ import {
 } from 'react-native'
 
 import { COLOR } from '../../constants'
-// Import Reader from '../reader'
 import Button from '../button'
 import StatusBar from '../status-bar'
 import Logo from '../logo'

@@ -4,10 +4,10 @@ import {
   combineReducers,
 } from 'redux'
 
-import counterReducers from './modules/counter'
+import qrCodeReaderReducers from './modules/qr-code-reader'
 
 const reducers = combineReducers({
-  counter: counterReducers,
+  qrCodeReader: qrCodeReaderReducers,
 })
 
 export default reducers
