@@ -1,6 +1,8 @@
 package com.nanp;
 
 import com.facebook.react.ReactActivity;
+import com.github.droibit.android.reactnative.customtabs.CustomTabsPackage;
+import com.lwansbrough.RCTCamera.RCTCameraPackage;
 
 public class MainActivity extends ReactActivity {
 
