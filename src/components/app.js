@@ -6,7 +6,7 @@ import {
 } from 'react-navigation'
 
 import Home from './screens/home'
-import Applicants from './screens/applicants'
+import Auth from './screens/auth'
 import Consent from './screens/consent'
 import Scan from './screens/scan'
 import Name from './screens/name'
@@ -15,8 +15,8 @@ export default StackNavigator({
   Home: {
     screen: Home,
   },
-  Applicants: {
-    screen: Applicants,
+  Auth: {
+    screen: Auth,
   },
   Consent: {
     screen: Consent,

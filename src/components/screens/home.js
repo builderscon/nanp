@@ -50,7 +50,7 @@ const Home = (props: Props) => {
       </View>
       <Button
         onPress={() => {
-          navigate('Applicants')
+          navigate('Auth')
         }}
         title="List"
         buttonStyle={styles.listButton}
