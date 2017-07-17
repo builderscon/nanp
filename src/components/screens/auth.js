@@ -114,7 +114,7 @@ export default class Auth extends React.Component {
     //   console.error(err)
     // });
     this.console.unshift(`render: ${this.state.loading}`)
-    const { navigate } = this.props.navigation
+    const { navigate, state } = this.props.navigation
     const activityIndicator = this.state.loading
       ? <View style={styles.loading}>
           <Text>Logging in</Text>
@@ -130,23 +130,26 @@ export default class Auth extends React.Component {
     return (
       <View style={styles.container}>
         { debugConsole }
-        <View style={styles.box}>
-        {this.state.code.map((n, i) => {
-          return (
-            <View style={{ flex: 1, padding: 10 }} key={`code${i}`}>
-              <TextInput
-                ref={(ti) => { this.codeInputs[i] = ti }}
-                style={styles.input}
-                onChangeText={this.onChangeCode(i)}
-                value={`${n !== null ? n : ''}`}
-                keyboardType={'numeric'}
-                selectTextOnFocus={true}
-                autoFocus={ i === this.state.focusCode }
-                maxLength={1}
-              />
-            </View>
-          )
-        })}
+        <View style={{ flex: 1, backgroundColor: COLOR.WHITE }}>
+          <Text>user: {state.params.user}</Text>
+          <View style={styles.box}>
+          {this.state.code.map((n, i) => {
+            return (
+              <View style={{ flex: 1, padding: 10 }} key={`code${i}`}>
+                <TextInput
+                  ref={(ti) => { this.codeInputs[i] = ti }}
+                  style={styles.input}
+                  onChangeText={this.onChangeCode(i)}
+                  value={`${n !== null ? n : ''}`}
+                  keyboardType={'numeric'}
+                  selectTextOnFocus={true}
+                  autoFocus={ i === this.state.focusCode }
+                  maxLength={1}
+                />
+              </View>
+            )
+          })}
+          </View>
         </View>
         <Button
           onPress={() => { navigate('Consent') }}

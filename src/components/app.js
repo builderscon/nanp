@@ -17,6 +17,7 @@ export default StackNavigator({
   },
   Auth: {
     screen: Auth,
+    path: 'auth/:user',
   },
   Consent: {
     screen: Consent,
